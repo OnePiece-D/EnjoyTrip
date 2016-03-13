@@ -17,5 +17,6 @@
 #define kSpace 5
 #define kZeroSpace 0
 #define kLabelHeight 15
+#define kUserHeadImageWidth 44
 
 #endif /* ContentSet_h */

@@ -10,7 +10,6 @@
 
 #import "WYLIntroductModel.h"
 
-#define kUserHeadImageWidth 44
 
 @interface WYLIntroductCell()
 
@@ -59,7 +58,7 @@
                                          }else {
                                              _stateView.hidden = YES;
                                              
-                                             [self updateOtherMansonry];
+//                                             [self updateOtherMansonry];
                                          }
                                      }];
     
@@ -83,8 +82,7 @@
 
 - (void)updataMansonry {
     [self.titleLable mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.backgroundBigView).offset(kSpace);
-        make.top.equalTo(self.backgroundBigView).offset(kSpace);
+        make.left.top.equalTo(self.backgroundBigView).offset(kSpace);
         
         make.right.equalTo(self.stateView.mas_left).offset(-kSpace * 2);
         make.bottom.equalTo(self.dateLabel.mas_top).offset(-kDistanceToVertical);

@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import <Foundation/Foundation.h>
+
 @interface WYLTitleAndDescView : UIView
+
+@property (nonatomic, strong) UIImageView * userHeaderImage;
 
 @property (nonatomic, strong) UILabel * titleLabel;
 
