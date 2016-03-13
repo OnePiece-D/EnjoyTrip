@@ -1,0 +1,42 @@
+//
+//  PrefixHeader.pch
+//  EnjoyTrip
+//
+//  Created by 王亚龙 on 16/3/9.
+//  Copyright © 2016年 YCD. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "ContentUrl.h"
+#import "ContentSet.h"
+
+#import "Masonry.h"
+#import "MJExtension.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+
+#import "WYLDataRequestModel.h"
+#import "WYLTool.h"
+#import "WYLFactory.h"
+#import "WYLNavigationSet.h"
+
+#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o
+//重写NSLog,Debug模式下打印日志和当前行数
+//#if DEBUG
+//#define DLog(FORMAT, ...) fprintf(stderr,"function:%s(line:%d) \ncontent:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+//#else
+//#define DLog(FORMAT, ...) nil
+//#endif
+
+#if DEBUG
+#define DLog(FORMAT,...) NSLog(@"%s[line:%d] %@",__FUNCTION__,__LINE__,FORMAT)
+#else
+#define DLog(FORMAT, ...) nil
+#endif
+
+#endif /* PrefixHeader_pch */
