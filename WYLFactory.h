@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "WYLDetailTipCell.h"
+#import "WYLDetailPhotoCell.h"
+#import "WYLDetailTipPhotoCell.h"
+
 @import UIKit;
 
 @interface WYLFactory : NSObject
@@ -16,5 +20,7 @@
                            color:(UIColor *)color
                             font:(UIFont *)font;
 
+
++ (id)factoryDetailCellTableView:(UITableView *)tableView reusename:(NSString *)reusename model:(id)model selected:(NSInteger)selected;
 
 @end

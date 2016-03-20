@@ -19,4 +19,6 @@
 #define kLabelHeight 15
 #define kUserHeadImageWidth 44
 
+#define Font(_size) [UIFont systemFontOfSize:_size]
+
 #endif /* ContentSet_h */

@@ -27,4 +27,9 @@
  */
 + (NSNumber *)dateToInterval:(NSString *)startDateStr endDateStr:(NSString *)endDateStr;
 
+/**
+ *  缩放比
+ */
++ (CGSize)scaleImageOriginalSize:(CGSize)size;
+
 @end

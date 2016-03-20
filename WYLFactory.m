@@ -21,4 +21,38 @@
     return label;
 }
 
++ (id)factoryDetailCellTableView:(UITableView *)tableView reusename:(NSString *)reusename model:(id)model selected:(NSInteger)selected {
+    WYLDetailCell * cell = cell = [tableView dequeueReusableCellWithIdentifier:reusename];
+    switch (selected) {
+        case 0: {
+            //tip
+            if (!cell) {
+                cell = [[WYLDetailTipCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reusename];
+            }
+            
+            break;
+        }
+        case 1: {
+            //photo
+            if (!cell) {
+                cell = [[WYLDetailPhotoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reusename];
+            }
+            
+            break;
+        }
+        case 2: {
+            if (!cell) {
+                cell = [[WYLDetailTipPhotoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reusename];
+            }
+            
+            break;
+        }
+            
+        default:
+            break;
+    }
+    cell.model = model;
+    return cell;
+}
+
 @end

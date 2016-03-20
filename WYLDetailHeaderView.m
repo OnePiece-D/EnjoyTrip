@@ -29,7 +29,9 @@
         make.left.top.right.bottom.equalTo(weakSelf).offset(kZeroSpace);
     }];
     [self.descView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.bigBackImage).offset(kSpace);
+        make.left.equalTo(self.bigBackImage).offset(kSpace);
+        make.bottom.equalTo(self.bigBackImage).offset(-kSpace);
+        make.right.equalTo(self.bigBackImage).offset(-kSpace);
         
         make.height.mas_equalTo(kUserHeadImageWidth);
     }];

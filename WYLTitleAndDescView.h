@@ -20,5 +20,6 @@
 
 
 - (void)setTitle:(NSString *)title desc:(NSString *)desc;
+- (void)setTitle:(NSString *)title desc:(NSString *)desc userHeaderImage:(NSString *)image;
 
 @end

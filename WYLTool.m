@@ -49,4 +49,14 @@
     return interval;
 }
 
++ (CGSize)scaleImageOriginalSize:(CGSize)size {
+    CGFloat width = size.width;
+    CGFloat height = size.height;
+    CGFloat scale = width / SCREEN_Size.width;
+    width = SCREEN_Size.width;
+    height = height / scale;
+//    NSLog(@"size:%@",NSStringFromCGSize(size));
+    return CGSizeMake(width, height);
+}
+
 @end

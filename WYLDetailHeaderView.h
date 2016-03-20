@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class WYLTitleAndDescView;
+#import "WYLTitleAndDescView.h"
 
 @interface WYLDetailHeaderView : UIView
 

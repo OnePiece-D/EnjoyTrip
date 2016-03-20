@@ -22,9 +22,10 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [super pushViewController:viewController animated:animated];
     
+    [self.navigationBar setTranslucent:YES];
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"CustomBarBackground"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationBar setShadowImage:[UIImage imageNamed:@"clearImage"]];
-    
+    viewController.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
@@ -33,6 +34,7 @@
     if (!NSStringFromClass([self.navigationController.topViewController class])) {
         [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarShadow"] forBarMetrics:UIBarMetricsDefault];
         [self.navigationBar setShadowImage:[UIImage imageNamed:@"kong"]];
+        [self.navigationBar setTranslucent:NO];
     }
     
     
